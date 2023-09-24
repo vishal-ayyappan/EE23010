@@ -271,8 +271,9 @@ f_{Y|x_{A}}\brak {y} < f_{Y|x_{B}}\brak {y} &, 0<y<1\\
 f_{Y|x_{A}}\brak {y} > f_{Y|x_{B}}\brak {y} &, y>1
 \end{cases}
 \end{align}
-Probability of error when $x_{A}$ is transmitted:\\
-When $x_{A}$ is transmitted, error occurs in $0<y<1$ because, in this interval the likelihood of observing $Y$ given $x_{A}$ is lower than the likelihood of observing $Y$ given $x_{B}$, Therefore,
+\begin{enumerate}
+\item When $0<y<1$.\\
+In this interval, when $x_{A}$ is transmitted, error occurs because the likelihood of observing $Y$ given $x_{A}$ is lower than the likelihood of observing $Y$ given $x_{B}$, Therefore,
 \begin{align}
 P_{e_{x_{A}}} &= \int_{0}^{1}f_{Y|x_{A}}\brak {y}dy \\
 &=\int_{0}^{1}e^{-\brak{y+1}}u\brak{y+1}dy \\
@@ -280,8 +281,8 @@ P_{e_{x_{A}}} &= \int_{0}^{1}f_{Y|x_{A}}\brak {y}dy \\
 &= e^{-1} - e^{-2}\\
 P_{e_{x_{A}}} &= 0.23
 \end{align}
-Probability of error when $x_{B}$ is transmitted:\\
-When $x_{B}$ is transmitted, error occurs in $-1<y<0$ because, in this interval the likelihood of observing $Y$ given $x_{A}$ is higher than the likelihood of observing $Y$ given $x_{B}$, Therefore,
+\item When $-1<y<0$.\\
+In this interval, when $x_{B}$ is transmitted, error occurs because the likelihood of observing $Y$ given $x_{A}$ is higher than the likelihood of observing $Y$ given $x_{B}$, Therefore,
 \begin{align}
 P_{e_{x_{B}}} &= \int_{-1}^{0}f_{Y|x_{B}}\brak {y}dy\\
 &= \int_{-1}^{0}e^{\brak{y-1}}\brak{1-u\brak{y-1}}\\
@@ -289,8 +290,10 @@ P_{e_{x_{B}}} &= \int_{-1}^{0}f_{Y|x_{B}}\brak {y}dy\\
 &= e^{-1} - e^{-2}\\
 P_{e_{x_{B}}} &= 0.23
 \end{align}
-Outside of these intervals, the ML detector can more reliably make a decision.\\
-The probability of error can be given as 
+\item When $y<-1$ and $y>1$.\\
+There are no errors in these intevals as the ML detectors can more reliably to make a decison.
+\end{enumerate}
+Hence, the probability of error can be given as 
 \begin{align}
 P_e &= \pr {x_A}P_{e_{x_{A}}} + \pr {x_B}P_{e_{x_{B}}}\\
 &= 0.23\times\brak{\pr {x_A} + \pr {x_B}}\\
