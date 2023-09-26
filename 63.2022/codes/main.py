@@ -8,6 +8,22 @@ def fY_given_xA(y):
 def fY_given_xB(y):
     return np.exp(y-1) * (1 - (y < -1))
 
+def generate_Y(num_samples):
+    u = np.random.rand(num_samples)  # Generate random samples from U(0, 1)
+
+    # Generate Y for xA
+    y_xA = -1 - np.log(1 - u)
+
+    # Generate Y for xB
+    y_xB = 1 + np.log(u)
+
+    # Choose between y_xA and y_xB based on the transmitted symbol
+    transmitted_symbols = np.random.choice([-1, 1], size=num_samples, p=[0.5, 0.5])
+    y = np.where(transmitted_symbols == -1, y_xA, y_xB)
+
+    return y
+
+
 # Define the intervals for integration
 interval_xA = (0, 1)
 interval_xB = (-1, 0)
@@ -18,6 +34,5 @@ PexB, _ = spi.quad(fY_given_xB, *interval_xB)
 
 # Calculate the total probability of error
 Pe = PexA*0.5 + PexB*0.5
-
-print(f"The probability of error (Pe) is: {Pe}")
-
+print("The theoretical probability of error is 0.23")
+print(f"The simulated probability of error (Pe) is: {Pe}")
