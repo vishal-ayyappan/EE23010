@@ -250,21 +250,24 @@ f\brak{x;\theta}= \begin{cases}
    \end{cases}
 \end{align*}
 where $\theta > 0$ is an unknown parameter. The maximum likelihood estimator of $\theta$ is,\\
-\solution\\
-The likelihood function of $\theta$ in $0<x<1$ is given by,
+\solution
 \begin{align}
-L\brak{\theta;X_1,X_2,...,X_n}=\prod_{i=1}^n \frac{2}{(\theta x_i)}(-\log_e x_i) e^{\frac{-(\log_e x_i)^2}{\theta}}
+L\brak{\theta;X_1,X_2,...,X_n} &= f\brak{\theta;X_1,X_2,...,X_n}
 \end{align}
-Taking the natural log on both sides,
+Maximizing $L\brak{\theta}$ is equivalent to maximizing the the $\log L\brak{\theta}$ as $\log$ is a monotonically increasing function.
 \begin{align}
-\ln \sbrak{ L(\theta; X_1, X_2, ..., X_n)} = n \ln 2 - n\ln \theta + \sum_{i=1}^{n}\ln \brak{-\ln x_{i}} - \sum_{i=1}^{n} \brak{\ln X_i} -\sum_{i=1}^{n}\frac{(\log_e X_i)^2}{\theta} 
+l\brak{\theta} &= \log L\brak{\theta}\\
+&= \log\brak{\prod_{i=1}^n f\brak{X_i|\theta}}\\
+&= \sum_{i=1}^{n} \log f\brak{X_i|\theta}\\
+&= - n \ln 2 - n\ln \theta + \sum_{i=1}^{n}\ln \brak{-\ln x_{i}} - \sum_{i=1}^{n} \brak{\ln X_i} -\sum_{i=1}^{n}\frac{(\log_e X_i)^2}{\theta} 
 \end{align}
-To find the maximum likelihood estimator of $\theta$, we need to maximize the likelihood function. Therefore,\\
+Maximizing $l\brak{\theta}$ with respect to $\theta$ gives the MLE estimation, therefore
 \begin{align}
-\frac{\partial L\brak{\theta;X_1,X_2,...,X_n}}{\partial \theta} &= 0\\
+\frac{\partial l\brak{\theta}}{\partial \theta} &= 0\\
 \frac{-n}{\theta} + \frac{1}{\brak{\theta}^2}\sum_{i=1}^{n}\brak{\log_e X_i}^2 &= 0\\
 \theta &= \frac{1}{n}\sum_{i=1}^{n}\brak{\log_e X_i}^2
 \end{align}
+
 
 
 
