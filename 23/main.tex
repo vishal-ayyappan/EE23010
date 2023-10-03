@@ -252,20 +252,24 @@ f\brak{x;\theta}= \begin{cases}
 where $\theta > 0$ is an unknown parameter. The maximum likelihood estimator of $\theta$ is,\\
 \solution
 \begin{align}
-L\brak{\theta;X_1,X_2,...,X_n} &= f\brak{\theta;X_1,X_2,...,X_n}
+L\brak{\theta} &= f\brak{x_1,x_2,..,x_n;\theta}
 \end{align}
-Maximizing $L\brak{\theta}$ is equivalent to maximizing the the $\log L\brak{\theta}$ as $\log$ is a monotonically increasing function.
+The likelihood function represents the relative probability of observing samples at different values of $\theta$. So, the probability of observing the sample is the product of the probabilities of each observation.
 \begin{align}
-l\brak{\theta} &= \log L\brak{\theta}\\
-&= \log\brak{\prod_{i=1}^n f\brak{X_i|\theta}}\\
-&= \sum_{i=1}^{n} \log f\brak{X_i|\theta}\\
-&= - n \ln 2 - n\ln \theta + \sum_{i=1}^{n}\ln \brak{-\ln x_{i}} - \sum_{i=1}^{n} \brak{\ln X_i} -\sum_{i=1}^{n}\frac{(\log_e X_i)^2}{\theta} 
+L\brak{\theta} = \prod_{i=1}^n f\brak{x_i;\theta}
+\end{align}
+Maximizing $L\brak{\theta}$ is equivalent to maximizing the the $\ln L\brak{\theta}$ as $\ln$ is a monotonically increasing function.
+\begin{align}
+l\brak{\theta} &= \ln L\brak{\theta}\\
+&= \ln\brak{\prod_{i=1}^n f\brak{x_i;\theta}}\\
+&= \sum_{i=1}^{n} \ln f\brak{x_i;\theta}\\
+&= - n \ln 2 - n\ln \theta + \sum_{i=1}^{n}\ln \brak{-\ln x_{i}} - \sum_{i=1}^{n} \brak{\ln x_i} -\sum_{i=1}^{n}\frac{(\ln x_i)^2}{\theta} 
 \end{align}
 Maximizing $l\brak{\theta}$ with respect to $\theta$ gives the MLE estimation, therefore
 \begin{align}
 \frac{\partial l\brak{\theta}}{\partial \theta} &= 0\\
-\frac{-n}{\theta} + \frac{1}{\brak{\theta}^2}\sum_{i=1}^{n}\brak{\log_e X_i}^2 &= 0\\
-\theta &= \frac{1}{n}\sum_{i=1}^{n}\brak{\log_e X_i}^2
+\frac{-n}{\theta} + \frac{1}{\brak{\theta}^2}\sum_{i=1}^{n}\brak{\ln X_i}^2 &= 0\\
+\theta &= \frac{1}{n}\sum_{i=1}^{n}\brak{\ln X_i}^2
 \end{align}
 
 
