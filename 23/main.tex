@@ -254,7 +254,7 @@ where $\theta > 0$ is an unknown parameter. The maximum likelihood estimator of 
 \begin{align}
 L\brak{\theta} &= f\brak{x_1,x_2,..,x_n;\theta}
 \end{align}
-The likelihood function represents the relative probability of observing samples at different values of $\theta$. So, the probability of observing the sample is the product of the probabilities of each observation.
+The product of pdfs can be used to approximate the likelihood function even if the variables are dependent. This is a general approach that is often used in practice to estimate MLE of $\theta$. Therefore,
 \begin{align}
 L\brak{\theta} = \prod_{i=1}^n f\brak{x_i;\theta}
 \end{align}
