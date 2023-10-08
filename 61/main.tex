@@ -249,10 +249,20 @@ Using the Ordinary Least Squares (OLS) method, a researcher estimated the relati
 where $\hat{\beta}_0 = 4543$ and $\hat{\beta}_1 = 645.08$. The standard errors of $\hat{\beta}_0$ and $\hat{\beta}_1$ are 921.79 and 70.01, respectively.\\
 The t-statistic for testing the null hypothesis $\beta_1 = 0$ is\\
 \solution\\
-the t-statistic for testing the null hypothesis $\hat{\beta}_0$ is given by,
+\textbf{t-statistic}:
+It is a measure of how many standard errors a point estimate is away from the hypothesized value.\\
+\textbf{Standard error}:
+It is a measure of how much the estimator is likely to vary from the true value of the parameter it is estimating.\\ 
+The t-statistic is derived by dividing the difference between the point estimate and the hypothesized value by the standard error of the estimator. It is given by,\\
 \begin{align}
 t_{\hat{\beta}_1} &= \frac{\hat{\beta}_1-\beta_1}{SE\brak{\hat{\beta}_1}}
 \end{align}
+where,
+\begin{itemize}
+\item $\hat{\beta}_1$ is the point estimate.
+\item $\beta_1$ is the hypothesized value.
+\item $SE\brak{\hat{\beta}_1}$ standard error of the estimator.
+\end{itemize}
 Given that $\hat{\beta}_1 = 645.08$ and $SE\brak{\hat{\beta}_1}=70.01$, we get
 \begin{align}
 t_{\hat{\beta}_1} &= \frac{645.08-0}{70.01}\\
