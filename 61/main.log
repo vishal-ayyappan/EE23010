@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.2)  8 OCT 2023 19:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.2)  9 OCT 2023 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1211,6 +1211,11 @@ Underfull \hbox (badness 8056) in paragraph at lines 248--257
  []
 
 
+Underfull \hbox (badness 2799) in paragraph at lines 248--257
+\OT1/txr/m/n/12 the es-ti-mated value of a pa-ram-e-ter from its
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 248--257
 
  []
@@ -1238,7 +1243,7 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 46269 bytes).
+Output written on main.pdf (1 page, 46067 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
