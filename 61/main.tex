@@ -34,7 +34,7 @@
 %\usepackage{txfonts}
 %\restoresymbol{TXF}{iint}
 %\usepackage{wasysym}
-%\usepackage{amsthm}
+\usepackage{amsthm}
 %\usepackage{iithtlc}
 %\usepackage{mathrsfs}
 %\usepackage{txfonts}
@@ -248,12 +248,9 @@ Using the Ordinary Least Squares (OLS) method, a researcher estimated the relati
 \end{align*}
 where $\hat{\beta}_0 = 4543$ and $\hat{\beta}_1 = 645.08$. The standard errors of $\hat{\beta}_0$ and $\hat{\beta}_1$ are 921.79 and 70.01, respectively.\\
 The t-statistic for testing the null hypothesis $\beta_1 = 0$ is\\
-\solution\\
-\textbf{t-statistic}:
-It is a measure of how many standard errors a point estimate is away from the hypothesized value.\\
-\textbf{Standard error}:
-It is a measure of how much the estimator is prone to deviate from the true value of the parameter it is estimating.\\ 
-The t-statistic is the ratio of the difference between the estimated value of a parameter from its hypothesized value to its standard error.\\
+\solution
+\begin{definition}[t-statistic]
+The t-statistic is the ratio of the difference between the estimated value of a parameter from its hypothesized value to its standard error.
 \begin{align}
 t_{\hat{\beta}_1} &= \frac{\hat{\beta}_1-\beta_1}{SE\brak{\hat{\beta}_1}}
 \end{align}
@@ -263,6 +260,18 @@ where,
 \item $\beta_1$ is the hypothesized value.
 \item $SE\brak{\hat{\beta}_1}$ standard error of the estimator.
 \end{itemize}
+\end{definition}
+\begin{definition}[Standard error]
+It is a measure of how much the statistic is likely to vary from the true value of the parameter it is estimating.
+\begin{align}
+SE(\hat{\beta_1}) = \sqrt{\frac{s^2}{n - 2}}
+\end{align}
+where,
+\begin{itemize}
+\item $s^2$ is the variance
+\item $n$ is the sample size
+\end{itemize}
+\end{definition}
 Given that $\hat{\beta}_1 = 645.08$ and $SE\brak{\hat{\beta}_1}=70.01$, we get
 \begin{align}
 t_{\hat{\beta}_1} &= \frac{645.08-0}{70.01}\\
